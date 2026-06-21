@@ -3,7 +3,6 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
-# Krijimi i user-it jo-root për siguri
 RUN useradd -m myuser && chown -R myuser /app
 USER myuser
 EXPOSE 8080
